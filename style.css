@@ -1,0 +1,194 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Raleway', 'Oswald', sans-serif;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+
+
+header h5 {
+    font-weight: 400;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #888;
+    transition: font-size 0.5s ease;
+    font-size: 14px;
+}
+
+.logo
+{
+    position: fixed;
+    top: 20px;
+    left: 35px;
+    width: 160px;
+}
+
+.header-icon {
+    position: fixed;
+    top: 35px;
+    right: 35px;
+    width: 17px;
+    border-radius: 50%;
+    transition: box-shadow 0.4s ease;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.header-icon:hover {
+    box-shadow: 1px 1px 5px #AAA;
+}
+
+header h5.selected {
+    font-weight: bold;
+    color: black;
+}
+
+header h5:hover {
+    color: black;
+    font-size: 16px;
+}
+
+#categories {
+    display: flex;
+    flex-grow: 1;
+}
+
+.category {
+    text-align: center;
+    width: 100%;
+    display: flex;
+}
+
+.scroll-container {
+    overflow-x: auto;
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.addButton {
+    background-color: white;
+    color: black;
+    display: inline-block;
+}
+
+.movieList {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.movie {
+    display: flex;
+    flex-direction: row;
+    margin: 0 7px;
+}
+
+.movie-thumbnail {
+    transition: height 0.5s ease;
+    height: 400px;
+    min-width: 270px;
+    max-width: 350px;
+    box-shadow: 0 5px 6px #CCC;
+}
+
+.movie-thumbnail:hover {
+    height: 450px;
+    max-width: 394px;
+}
+
+#search {
+    display: flex;
+    flex-direction: column;
+}
+
+#search input {
+    width: 250px;
+    height: 25px;
+    font-size: 14px;
+    padding: 2px 4px;
+}
+
+#searchField-container {
+    width: 100%;
+}
+
+.no-poster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #AAA;
+    background-image: url(NoPoster.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    background-color: rgba(196, 196, 196, 0.14);
+
+}
+
+.no-poster .movie-title {
+    cursor: default;
+    font-size: 30px;
+    font-weight: bold;
+    align-self: flex-start;
+    color: #757575;
+}
+
+
+.movie-popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 400px;
+}
+
+.movie-overview {
+    text-align: justify;
+    padding: 0 17px;
+}
+
+.stars-container {
+    display: flex;
+    justify-content: center;
+}
+
+.add-to-watchlist {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    border: solid 2px #888;
+    color: #444;
+    margin-left: 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.add-to-watchlist:hover {
+    background-color: #F9F9F9;
+    box-shadow: 1px 1px 5px #CCC;
+}
+.add-to-watchlist:active {
+    box-shadow: none;
+}
+.add-to-watchlist:focus {
+    /* Remove blue border when clicked in Chrome */
+    outline: 0;
+}
+
