@@ -104,8 +104,8 @@
         $('.category').hide();
         updateLikedList();
         var obj_KNN = new KNN(20, 20, 0.6);
-        updateLikedList($('#recommended').fadeIn(1000));
         // Select first header
+        $('#recommended').fadeIn(1000);
 
         $('#recommendedHeader').addClass('selected');
         // Setup event
@@ -176,7 +176,7 @@
 
         }
 
-        function updateToWatchList(callback) {
+        function updateToWatchList() {
             $('#watchList').empty();
             var watchMovies = getToWatchMovies();
 
@@ -187,11 +187,6 @@
                     new Movie(watchMovies[i].id, $('#watchList'), watchMovies[i]);
                 };
             }
-            if(callback)
-            {
-                callback();
-            }
-
 
         }
 
